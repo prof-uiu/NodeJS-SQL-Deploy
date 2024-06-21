@@ -1,6 +1,5 @@
 import express from "express";
 import cookieParser from "cookie-parser";
-import serverless from "serverless-http";
 
 import Router from "./routes/index.js";
 import isAuth from "./config/auth.js";
@@ -30,5 +29,3 @@ app.get("/logado", isAuth, (req, res) => {
 app.listen(port, () => {
   console.log(`Node.js ouvindo na porta ${port}.`);
 });
-
-export const handle = serverless(app);
