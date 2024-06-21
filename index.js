@@ -29,3 +29,5 @@ app.get("/logado", isAuth, (req, res) => {
 app.listen(port, () => {
   console.log(`Node.js ouvindo na porta ${port}.`);
 });
+
+export default app;
